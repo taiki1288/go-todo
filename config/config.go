@@ -6,7 +6,7 @@ import (
 	"gopkg.in/go-ini/ini.v1"
 )
 
-type Config struct {
+type ConfigList struct {
 	Port      string
 	SQLDriver string
 	DbName    string
