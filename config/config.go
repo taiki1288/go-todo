@@ -1,6 +1,8 @@
 package config
 
-import "log"
+import (
+	"log"
+)
 
 type Config struct {
 	Port      string
@@ -10,6 +12,10 @@ type Config struct {
 }
 
 var Config ConfigList
+
+func init() {
+	LoadConfig()
+}
 
 func LoadConfig() {
 	cfg, err := ini.Load("config.ini")
