@@ -2,6 +2,8 @@ package config
 
 import (
 	"log"
+
+	"gopkg.in/go-ini/ini.v1"
 )
 
 type Config struct {
