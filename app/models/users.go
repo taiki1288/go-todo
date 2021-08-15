@@ -10,3 +10,14 @@ type User struct {
 	Password string
 	CreateAt time.Time
 }
+
+func (u *User) CreateUser() (err error) {
+	cmd := `insert into users(
+        uuid,
+		name,
+		email,
+		password,
+		created_at) values (?, ?, ?, ?, ?)`
+	
+	_, err := Db.Exec(cmd)
+}
