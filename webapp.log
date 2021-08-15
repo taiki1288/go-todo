@@ -19,3 +19,5 @@
 2021/08/15 16:02:43 users.go:34: table users has no column named email
 2021/08/15 16:15:20 users.go:34: table users has no column named email
 2021/08/15 17:52:37 users.go:34: table users has no column named email
+2021/08/15 20:46:46 todos.go:23: table todos has no column named created_at
+2021/08/15 20:49:57 todos.go:23: table todos has no column named created_at

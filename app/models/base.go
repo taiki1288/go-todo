@@ -41,7 +41,7 @@ func init() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
 		content TEXT,
 		user_id INTEGER,
-		create_at DATETIME)`, tableNameTodo)
+		created_at DATETIME)`, tableNameTodo)
 
 	Db.Exec(cmdT)
 }
