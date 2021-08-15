@@ -50,3 +50,7 @@ func GetUser(id int) (user User, err error) {
 	)
 	return user, err
 } 
+
+func (u *User) UpdateUser() (err error) {
+	
+}
