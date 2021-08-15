@@ -61,7 +61,7 @@ func GetTodos() (todos []Todo, err error) {
 	return todos, err
 }
 
-func(u *User) GetTodosByUser() (todos []todo, err error) {
+func(u *User) GetTodosByUser() (todos []Todo, err error) {
 	cmd := `select id, content, user_id, created_at from todos
 	where user_id = ?`
 
