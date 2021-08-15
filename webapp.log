@@ -1,1 +1,21 @@
 2021/08/15 00:52:35 main.go:15: test
+2021/08/15 10:26:01 users.go:34: sql: converting argument $1 type: unsupported type func() uuid.UUID, a func
+2021/08/15 10:26:20 users.go:34: sql: converting argument $1 type: unsupported type func() uuid.UUID, a func
+2021/08/15 10:34:40 users.go:34: sql: converting argument $1 type: unsupported type func() uuid.UUID, a func
+2021/08/15 10:35:44 users.go:34: sql: converting argument $5 type: unsupported type func() time.Time, a func
+2021/08/15 10:37:24 users.go:34: table users has no column named email
+2021/08/15 10:40:42 users.go:34: table users has no column named email
+2021/08/15 11:05:43 users.go:34: table users has no column named email
+2021/08/15 11:13:30 users.go:34: table users has no column named email
+2021/08/15 11:15:06 users.go:34: table users has no column named email
+2021/08/15 11:36:05 users.go:34: table users has no column named email
+2021/08/15 11:46:45 users.go:34: table users has no column named email
+2021/08/15 11:54:33 users.go:34: table users has no column named email
+2021/08/15 11:55:36 users.go:34: table users has no column named email
+2021/08/15 11:56:32 users.go:34: table users has no column named email
+2021/08/15 11:58:39 users.go:34: table users has no column named email
+2021/08/15 12:06:13 users.go:34: table users has no column named email
+2021/08/15 15:44:47 users.go:34: table users has no column named email
+2021/08/15 16:02:43 users.go:34: table users has no column named email
+2021/08/15 16:15:20 users.go:34: table users has no column named email
+2021/08/15 17:52:37 users.go:34: table users has no column named email
