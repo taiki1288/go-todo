@@ -5,6 +5,7 @@ import (
     "html/template"
 	"net/http"
 	"go-todo/config"
+	"go-todo/app/models"
 )
 
 func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) {
@@ -35,6 +36,7 @@ func StartMainServer() error {
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/authenticate", authenticate)
+	http.HandleFunc("/todos", index)
 	return http.ListenAndServe(":" + config.Config.Port, nil)
 }
 
