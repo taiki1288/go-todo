@@ -109,6 +109,7 @@ func (u *User) CreateSession() (session Session, err error) {
 	from sessions where user_id = ? and email = ?`
 
 	err = Db.QueryRow(cmd2, u.ID, u.Email).Scan(
+		&session.ID,
 		&session.UUID, 
 		&session.Email, 
 		&session.UserID, 

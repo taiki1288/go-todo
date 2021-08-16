@@ -161,3 +161,4 @@ created by net/http.(*Server).Serve
 2021/08/16 17:20:03 main.go:19: no such column: email
 2021/08/16 17:20:35 main.go:19: sql: expected 5 destination arguments in Scan, not 4
 2021/08/16 17:22:52 main.go:19: sql: expected 5 destination arguments in Scan, not 4
+2021/08/16 17:29:36 main.go:19: sql: expected 5 destination arguments in Scan, not 4
