@@ -1,7 +1,9 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
+	"go-todo/app/models"
 )
 
 func signup(w http.ResponseWriter, r *http.Request) {
@@ -13,9 +15,14 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			log.Fatalln(err)
 		}
 		user := models.User{
-			Name: r.PostFromValue("name"),
-			Email: r.PostFromValue("email"),
-			Password: r.PostFromValue("password"),
+			Name: r.PostFormValue("name"),
+			Email: r.PostFormValue("email"),
+			PassWord: r.PostFormValue("password"),
 		}
+		if err := user.CreateUser(); err != nil {
+			log.Println(err)
+		}
+
+		http.Redirect(w, r, "/", 302)
 	}
 }
