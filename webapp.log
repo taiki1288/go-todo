@@ -166,3 +166,25 @@ created by net/http.(*Server).Serve
 2021/08/16 18:17:18 server.go:3139: http: superfluous response.WriteHeader call from go-todo/app/controllers.authenticate (route_auth.go:56)
 2021/08/16 18:17:25 route_auth.go:38: sql: no rows in result set
 2021/08/16 18:17:25 server.go:3139: http: superfluous response.WriteHeader call from go-todo/app/controllers.authenticate (route_auth.go:56)
+2021/08/16 23:46:22 server.go:3139: http: panic serving [::1]:61168: template: index.html:2: unexpected EOF
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc000111360)
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:1824 +0x153
+panic(0x44c7fe0, 0xc0000920d0)
+	/usr/local/Cellar/go/1.16.5/libexec/src/runtime/panic.go:971 +0x499
+html/template.Must(...)
+	/usr/local/Cellar/go/1.16.5/libexec/src/html/template/template.go:374
+go-todo/app/controllers.generateHTML(0x45ad810, 0xc0001a6000, 0x0, 0x0, 0xc000113aa8, 0x3, 0x3)
+	/Users/yamashitataiki/go-todo/app/controllers/server.go:17 +0x2ce
+go-todo/app/controllers.index(0x45ad810, 0xc0001a6000, 0xc00018e000)
+	/Users/yamashitataiki/go-todo/app/controllers/route_main.go:21 +0x15d
+net/http.HandlerFunc.ServeHTTP(0x4550090, 0x45ad810, 0xc0001a6000, 0xc00018e000)
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:2069 +0x44
+net/http.(*ServeMux).ServeHTTP(0x47ce140, 0x45ad810, 0xc0001a6000, 0xc00018e000)
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:2448 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45ad810, 0xc0001a6000, 0xc00018e000)
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc000111360, 0x45ae080, 0xc000188000)
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:3013 +0x39b
