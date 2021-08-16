@@ -153,3 +153,11 @@ net/http.(*conn).serve(0xc00021e000, 0x45a90c0, 0xc000222000)
 	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:1952 +0x8cd
 created by net/http.(*Server).Serve
 	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:3013 +0x39b
+2021/08/16 17:13:07 users.go:105: table sessions has no column named email
+2021/08/16 17:13:07 main.go:19: no such column: email
+2021/08/16 17:18:27 users.go:105: table sessions has no column named email
+2021/08/16 17:18:27 main.go:19: no such column: email
+2021/08/16 17:20:03 users.go:105: table sessions has no column named email
+2021/08/16 17:20:03 main.go:19: no such column: email
+2021/08/16 17:20:35 main.go:19: sql: expected 5 destination arguments in Scan, not 4
+2021/08/16 17:22:52 main.go:19: sql: expected 5 destination arguments in Scan, not 4
