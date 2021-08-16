@@ -162,3 +162,7 @@ created by net/http.(*Server).Serve
 2021/08/16 17:20:35 main.go:19: sql: expected 5 destination arguments in Scan, not 4
 2021/08/16 17:22:52 main.go:19: sql: expected 5 destination arguments in Scan, not 4
 2021/08/16 17:29:36 main.go:19: sql: expected 5 destination arguments in Scan, not 4
+2021/08/16 18:17:18 route_auth.go:38: sql: no rows in result set
+2021/08/16 18:17:18 server.go:3139: http: superfluous response.WriteHeader call from go-todo/app/controllers.authenticate (route_auth.go:56)
+2021/08/16 18:17:25 route_auth.go:38: sql: no rows in result set
+2021/08/16 18:17:25 server.go:3139: http: superfluous response.WriteHeader call from go-todo/app/controllers.authenticate (route_auth.go:56)
