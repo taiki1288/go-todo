@@ -66,4 +66,16 @@ func authenticate(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/login", 302)
 	}
 }
+
+func logout(w http.ResponseWriter, r *http.Request) {
+	cookie, err := r.Cookie("_cookie")
+	if err !=nil {
+		log.Fatalln(err)
+	}
+
+	if err != http.ErrNoCookie {
+		session := models.Sessions{UUID: cookie.Value}
+		
+	}
+}
 	
