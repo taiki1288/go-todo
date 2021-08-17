@@ -29,7 +29,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func todoNew(w http.ResponseWriter r *http.Request) {
+func todoNew(w http.ResponseWriter, r *http.Request) {
 	_, err := session(w, r)
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
