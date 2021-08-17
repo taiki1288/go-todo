@@ -13,9 +13,10 @@ func LoggingSettings(logFile string) {
 		log.Fatalln(err)
 	}
 	multiLogFile := io.MultiWriter(os.Stdout, logfile)
+	//io.MultiWriterでログの書き込み先を標準出力先とログファイルに指定している。SetFlagsでlogのフォーマットを指定している。
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+	// SetFlagsでログのフォーマットを指定している。
 	log.SetOutput(multiLogFile)
 	//OpenFileでLogFileを読み込んで読み書き、作成、開くができlogfileとして変数作成。
-	//io.MultiWriterでログの書き込み先を標準出力先とログファイルに指定している。SetFlagsでlogのフォーマットを指定している。
 	
 }
