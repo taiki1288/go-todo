@@ -1,11 +1,11 @@
 {{ define "content" }}
-UserName: {{.Name}}
+UserName:{{.Name}}
 <h1>TodoApp</h1>
 
 <p>[<a href="/todos/new">Create</a>>]</p>
 <hr>
 
-{{range .Todos}}
+{{ range .Todos }}
 <div>{{.Content}}</div>
 <p>[<a href="/todos/edit/{{.ID}}">Edit</a>>]</p>
 <p>[<a href="/todos/delete/{{.ID}}">Delete</a>>]</p>
