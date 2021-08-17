@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"go-todo/app/models"
 	"log"
 	"net/http"
 )
@@ -35,5 +36,22 @@ func todoNew(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/login", 302)
 	} else {
 		generateHTML(w, nil, "layout", "private_navbar", "todo_new")
+	}
+}
+
+func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
+	see, err := session(w, r)
+	if err != nil {
+		http.Redirect(w, r, "/login", 302)
+	} else {
+		_, err := sess.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		t, err := models.GetTodo(id)
+		if err != nil {
+			log.Println(err)
+		}
+		generateHTML(w, t, "layout", "private_navbar", "todo_edit")
 	}
 }
