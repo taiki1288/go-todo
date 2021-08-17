@@ -40,7 +40,7 @@ func todoNew(w http.ResponseWriter, r *http.Request) {
 }
 
 func todoEdit(w http.ResponseWriter, r *http.Request, id int) {
-	see, err := session(w, r)
+	sess, err := session(w, r)
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
