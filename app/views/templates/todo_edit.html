@@ -1,8 +1,8 @@
 {{define "content"}}
-{{.Content}}
+<div class="font-weight-bold mb-3">{{.Content}}</div>
 
 <form role="form" action="/todos/update/{{.ID}}" method="POST">
-    <div class="lead">TodosUpdate</div>
+    <div class="lead font-weight-bold mb-5">TodosUpdate</div>
     <div class="form-group">
         <textarea class="form-control" name="content" id="content" placeholder="Todoを更新" rows="4">{{.Content}}</textarea>
         <br/>
