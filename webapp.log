@@ -188,3 +188,5 @@ net/http.(*conn).serve(0xc000111360, 0x45ae080, 0xc000188000)
 	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:1952 +0x8cd
 created by net/http.(*Server).Serve
 	/usr/local/Cellar/go/1.16.5/libexec/src/net/http/server.go:3013 +0x39b
+2021/08/21 10:51:44 users.go:121: attempt to write a readonly database
+2021/08/21 10:51:47 todos.go:122: attempt to write a readonly database
